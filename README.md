@@ -11,7 +11,7 @@ eeFBA\
 
 *malate_NH4assimilation.m*:comparing oxygen demand and nitrogenase activity on L-malate with and without ammonia assimilation; computations for Fig.4A
 
-*malate_NH4assimilation.m*:comparing oxygen demand and nitrogenase activity on sucrose with and without ammonia assimilation; computations for Fig.S9
+*sucrmal_NH4assimilation.m*:comparing oxygen demand and nitrogenase activity on sucrose or malate with and without ammonia assimilation; computations for Fig.S9
 
 *yield_sucrose.m*: comapring maximum nitrogenase activity and minimum oxygen demand for bacteroids using malate or sucrose as a carbon source; computations for Fig.5A-B
 
