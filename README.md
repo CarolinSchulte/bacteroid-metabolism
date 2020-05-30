@@ -1,6 +1,11 @@
 # bacteroid-metabolism
 Scripts to reproduce results for Carolin C. M. Schulte, Rachel M. Wheatley, Jason J. Terpolilli, Gerhard Saalbach, Daan H. de Groot, Antonis Papachristodoulou, Philip S. Poole: "How legumes control nitrogen fixation by root nodule bacteria" (*submitted*)
 
+**ECMs**
+*bacteroid_ecminput.csv*: contains description and indeces for metabolites used for ECM enumeration with malate and amino acids as inputs; indeces apply to the sbml file bacteroid_ECM.xml
+
+*bacteroid_ecminput_sucrose.csv*: contains description and indeces for metabolites used for ECM enumeration with sucrose as a carbon source; indeces apply to the sbml file bacteroid_ECM_sucrose.xml
+
 **MatlabScripts**\
 eeFBA\
 *eeFBA_MalVar.m*: script for eeFBA computations for varying malate uptake rates; functions are based on the scripts used in Damiani *et al.*, *PLoS Comput Biol* 2017 Sep 28;13(9):e1005758, doi: 10.1371/journal.pcbi.1005758 
@@ -27,7 +32,3 @@ eeFBA\
 
 *iCS320.xml*: sbml for the model iCS320, which was used for FBA-based computations
 
-
-*bacteroid_ecminput.csv*: contains description and indeces for metabolites used for ECM enumeration with malate and amino acids as inputs; indeces apply to the sbml file bacteroid_ECM.xml
-
-*bacteroid_ecminput_sucrose.csv*: contains description and indeces for metabolites used for ECM enumeration with sucrose as a carbon source; indeces apply to the sbml file bacteroid_ECM_sucrose.xml
