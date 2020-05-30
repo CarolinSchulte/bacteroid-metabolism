@@ -1,7 +1,7 @@
 # bacteroid-metabolism
 Scripts to reproduce results for Carolin C. M. Schulte, Rachel M. Wheatley, Jason J. Terpolilli, Gerhard Saalbach, Daan H. de Groot, Antonis Papachristodoulou, Philip S. Poole: "How legumes control nitrogen fixation by root nodule bacteria" (*submitted*)
 
-**ECMs**
+**ECMs**\
 *bacteroid_ecminput.csv*: contains description and indeces for metabolites used for ECM enumeration with malate and amino acids as inputs; indeces apply to the sbml file bacteroid_ECM.xml
 
 *bacteroid_ecminput_sucrose.csv*: contains description and indeces for metabolites used for ECM enumeration with sucrose as a carbon source; indeces apply to the sbml file bacteroid_ECM_sucrose.xml
