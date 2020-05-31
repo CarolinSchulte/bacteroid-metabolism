@@ -47,6 +47,5 @@ model = changeRxnBounds(model,'DM_cpd00214',0.01,'l');
 model = changeRxnBounds(model,'DM_cpd03802',0.01,'l');
 model = changeRxnBounds(model,'DM_cpd00111',0.01,'l');
 
-%Flux Variability Analysis and PhPP
-%[minFlux, maxFlux] = fluxVariability(model, 95, 'max', model.rxns, 0, 0)
+%PhPP
 %[growthRates, shadowPrices1, shadowPrices2] = phenotypePhasePlane(model,'EX_cpd00130','EX_cpd00007',50,50,50);
