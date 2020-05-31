@@ -107,7 +107,7 @@ model_sucr_gs = changeRxnBounds(model_sucr_gs,'EX_cpd00007',-10,'l');
 model_sucr_gs = changeRxnBounds(model_sucr_gs,'EX_cpd00007',0,'u');
 model_sucr_gs = changeRxnBounds(model_sucr_gs,'EX_cpd00281',0,'b');
 
-%Define interval for malate and oxygen uptake rates
+%Define interval for sucrose and oxygen uptake rates
 fluxBounds_sucr = [-0.1:-0.2:-18];
 fluxBounds_o2 = [0:-0.1:-50];
 
@@ -118,7 +118,7 @@ fluxBounds_o2 = [0:-0.1:-50];
  sucr_gs = [];
  nit_sucr_gs = [];
  
- %Scan over malate uptake rates and find minimum O2 uptake required for
+ %Scan over sucrose uptake rates and find minimum O2 uptake required for
  %nitrogenase activity
  
  for i = fluxBounds_sucr
