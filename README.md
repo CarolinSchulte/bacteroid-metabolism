@@ -1,34 +1,37 @@
 # bacteroid-metabolism
-Scripts to reproduce results for Carolin C. M. Schulte, Rachel M. Wheatley, Jason J. Terpolilli, Gerhard Saalbach, Daan H. de Groot, Antonis Papachristodoulou, Philip S. Poole: "How legumes control nitrogen fixation by root nodule bacteria" (*submitted*)
+Scripts to reproduce results for Carolin C. M. Schulte, Khushboo Borah, Rachel M. Wheatley, Jason J. Terpolilli, Gerhard Saalbach, Nick Crang, Daan H. de Groot, R. George Ratcliffe, Nicholas J. Kruger, 
+Antonis Papachristodoulou, Philip S. Poole: "Legume control of nitrogen fixation by root nodule bacteria" (*submitted*)
 
-**ECMs**\
-*bacteroid_ecminput.csv*: contains description and indeces for metabolites used for ECM enumeration with malate and amino acids as inputs; indeces apply to the sbml file bacteroid_ECM.xml
+*eeFBA_O2Var.m*: script for ensemble-evolutionary flux balance analysis with varying oxygen uptake rates; functions are based on the scripts used in Damiani *et al.*, *PLoS Comput Biol* 2017 Sep 28;13(9):e1005758, doi: 10.1371/journal.pcbi.1005758 
+*NH4assimilation_MalSucr.m*: script for calculating minimum oxygen uptake for bacteroids using malate or sucrose as a carbon source; testing the effect of ammonia assimilation via GS-GOGAT
+*yield_MalSucr.m*: script for calculating maximum nitrogenase activity of bacteroids using malate or sucrose as a carbon source
 
-*bacteroid_ecminput_sucrose.csv*: contains description and indeces for metabolites used for ECM enumeration with sucrose as a carbon source; indeces apply to the sbml file bacteroid_ECM_sucrose.xml
-
-**MatlabScripts**\
-eeFBA\
-*eeFBA_MalVar.m*: script for eeFBA computations for varying malate uptake rates; functions are based on the scripts used in Damiani *et al.*, *PLoS Comput Biol* 2017 Sep 28;13(9):e1005758, doi: 10.1371/journal.pcbi.1005758 
-
-*bacteroid.m*: sets constraints for general FBA-based computations
-
-*ketoglutarate_NH4assimilation.m*: comparing oxygen demand and nitrogenase activity on 2-oxoglutarate with and without ammonia assimilation; computations for Fig.4B
-
-*malate_NH4assimilation.m*:comparing oxygen demand and nitrogenase activity on L-malate with and without ammonia assimilation; computations for Fig.4A
-
-*sucrmal_NH4assimilation.m*:comparing oxygen demand and nitrogenase activity on sucrose or malate with and without ammonia assimilation; computations for Fig.S9
-
-*yield_sucrose.m*: comapring maximum nitrogenase activity and minimum oxygen demand for bacteroids using malate or sucrose as a carbon source; computations for Fig.5A-B
-
-*yield_glucose.m*: comapring maximum nitrogenase activity and minimum oxygen demand for bacteroids using malate or glucose as a carbon source; computations for Fig.S7
-
-*ECM_helper.m*: script for creating sbml files to run ECM enumeration either with malate and amino acids or with sucrose
+*iCS323.xml*: sbml for the model iCS323, which was used for FBA-based computations
 
 
-**sbml_files**\
-*bacteroid_ECM.xml*: sbml file for running ECM enumeration with malate and amino acids as inputs
+## ecmtool
+Forked from
+```
+https://github.com/SystemsBioinformatics/ecmtool.git
+```
 
-*bacteroid_ECM_sucrose.xml*: sbml file for running ECM enumeration with sucrose as a carbon source
+**bacteroid_aminoacids.py**: extension of main.py to run conversion mode analysis on
+*i*CS323, using one amino acid at a time as an input
 
-*iCS320.xml*: sbml for the model iCS320, which was used for FBA-based computations
+**ECM_iCC541**: MATLAB script to modify *i*CC541 ([Contador *et al.*, 2020](https://msystems.asm.org/content/5/1/e00516-19)) for conversion mode analysis
 
+###ECMinputs
+Excel files specifying inputs and ouputs for conversion mode analysis
+
+###ECMresults
+csv files with the conversion modes calculated for the different amino acid inputs
+
+###models_bacteroid
+sbml files of the models used for conversion mode analysis
+
+##MatlabScripts
+###eeFBA
+functions to perform ensemble-evolutionary flux balance analysis; based on scripts developed in [Damiani *et al.* 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005758)
+
+###helper
+functions to perform flux balance analysis-based computations

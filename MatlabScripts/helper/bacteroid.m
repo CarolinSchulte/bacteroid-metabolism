@@ -9,17 +9,18 @@ model = changeRxnBounds(model,excRxns,0,'l');
 %Set nitrogenase reaction as objective
 model = changeObjective(model,'rxn06874');
 
-%Prevent succinate secretion
+%Close succinate exchange
 model = changeRxnBounds(model,'EX_cpd00036',0,'b');
 
 %Close amino acid transport reactions (except leucine, homoserine, GABA)
-model = changeRxnBounds(model,model.rxns(210:222),0,'b');
-model = changeRxnBounds(model,model.rxns(224:228),0,'b');
+transportRxns = {'rxn05146','rxn10862','rxn08097','rxn05151','rxn05152','rxn05154',...
+    'rxn05155','rxn10883','rxn05219','rxnTABCcpd00065','rxnTABCcpd00066','rxnTABCcpd00069',...
+    'rxn05237','rxn05164','rxn05165','rxn05168','rxn05169','rxn05179'};
+model = changeRxnBounds(model,transportRxns,0,'b');
 
 %Define exchange metabolites: H+,N2,H2O,phosphate,sulfate,CO2,H2
-excMets = {'EX_cpd00067','EX_cpd00528',...
-     'EX_cpd00001','EX_cpd00009','EX_cpd00048','EX_cpd00011',...
-     'EX_cpd11640'};
+excMets = {'EX_cpd00067','EX_cpd00528','EX_cpd00001','EX_cpd00009',...
+    'EX_cpd00048','EX_cpd00011','EX_cpd11640'};
 
 model = changeRxnBounds(model,excMets,-1000,'l');
 
@@ -34,8 +35,12 @@ model = changeRxnBounds(model,'EX_cpd00227',-1,'l');
 model = changeRxnBounds(model,'EX_cpd00281',-1,'l');
 
 %Set demand for amino acids (for protein biosynthesis)
-model = changeRxnBounds(model,model.rxns(237:255),0.01,'l');
-model = changeRxnBounds(model,model.rxns(237:255),0.05,'u');
+demandAminoAcids = {'DM_cpd00023','DM_cpd00033','DM_cpd00035','DM_cpd00039',...
+    'DM_cpd00041','DM_cpd00051','DM_cpd00053','DM_cpd00054','DM_cpd00060','DM_cpd00065',...
+    'DM_cpd00066','DM_cpd00069','DM_cpd00084','DM_cpd00107','DM_cpd00119','DM_cpd00129',...
+    'DM_cpd00156','DM_cpd00161','DM_cpd00322'};
+model = changeRxnBounds(model,demandAminoAcids,0.01,'l');
+model = changeRxnBounds(model,demandAminoAcids,0.05,'u');
 
 %Allow unlimted production of alanine and aspartate (secreted to the plant)
 model = changeRxnBounds(model,'DM_cpd00035',1000,'u');
@@ -46,6 +51,3 @@ model = changeRxnBounds(model,'DM_cpdPG6',0.01,'l');
 model = changeRxnBounds(model,'DM_cpd00214',0.01,'l');
 model = changeRxnBounds(model,'DM_cpd03802',0.01,'l');
 model = changeRxnBounds(model,'DM_cpd00111',0.01,'l');
-
-%PhPP
-%[growthRates, shadowPrices1, shadowPrices2] = phenotypePhasePlane(model,'EX_cpd00130','EX_cpd00007',50,50,50);
