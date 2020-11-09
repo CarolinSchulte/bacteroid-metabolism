@@ -20,18 +20,18 @@ https://github.com/SystemsBioinformatics/ecmtool.git
 
 **ECM_iCC541**: MATLAB script to modify *i*CC541 ([Contador *et al.*, 2020](https://msystems.asm.org/content/5/1/e00516-19)) for conversion mode analysis
 
-###ECMinputs
+### ECMinputs
 Excel files specifying inputs and ouputs for conversion mode analysis
 
-###ECMresults
+### ECMresults
 csv files with the conversion modes calculated for the different amino acid inputs
 
-###models_bacteroid
+### models_bacteroid
 sbml files of the models used for conversion mode analysis
 
-##MatlabScripts
-###eeFBA
+## MatlabScripts
+### eeFBA
 functions to perform ensemble-evolutionary flux balance analysis; based on scripts developed in [Damiani *et al.* 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005758)
 
-###helper
+### helper
 functions to perform flux balance analysis-based computations
