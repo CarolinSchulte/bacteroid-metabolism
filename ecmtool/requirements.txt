@@ -1,0 +1,10 @@
+numpy
+#mpi4py==3.0.0
+scipy
+sympy
+python-libsbml
+cbmpy
+pycddlib
+psutil
+sklearn
+cython
