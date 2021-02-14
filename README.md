@@ -13,7 +13,7 @@ All MATLAB scripts were run with the COBRA Toolbox v.3.0 ([Heirendt *et al.*, 20
 |
 | |- bacteroid_aminoacids.py    # extension of main.py to run conversion mode analysis on iCS323, 
 |                                 using one amino acid at a time as an input
-| |- ECM_iCC541.m               # MATLAB script to modify iCC541 (Contador et al., 2020, 
+| |- ECM_iCC541.m               # MATLAB script to modify iCC541 (Contador et al. 2020, 
 |                                 https://msystems.asm.org/content/5/1/e00516-19) for conversion mode analysis
 | |- ECMinputs/                 # Excel files specifying inputs and ouputs for conversion mode analysis
 | |- ECMresults/                # csv files with the conversion modes calculated for the different amino acid inputs
