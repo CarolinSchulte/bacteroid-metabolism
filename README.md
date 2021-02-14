@@ -11,8 +11,10 @@ All MATLAB scripts are based on the COBRA Toolbox v.3.0 ([Heirendt *et al.*, 201
 |
 |- ecmtool/                     # forked from https://github.com/SystemsBioinformatics/ecmtool.git
 |
-| |- bacteroid_aminoacids.py    # extension of main.py to run conversion mode analysis on *i*CS323, using one amino acid at a time as an input
-| |- ECM_iCC541.m               # MATLAB script to modify *i*CC541 ([Contador *et al.*, 2020](https://msystems.asm.org/content/5/1/e00516-19)) for conversion mode    |                                 analysis
+| |- bacteroid_aminoacids.py    # extension of main.py to run conversion mode analysis on *i*CS323, 
+|                                 using one amino acid at a time as an input
+| |- ECM_iCC541.m               # MATLAB script to modify *i*CC541 ([Contador *et al.*, 2020](https://msystems.asm.org/content/5/1/e00516-19)) for conversion mode
+|                                 analysis
 | |- ECMinputs/                 # Excel files specifying inputs and ouputs for conversion mode analysis
 | |- ECMresults/                # csv files with the conversion modes calculated for the different amino acid inputs
 | |- models_bacteroid/          # sbml files of the models used for conversion mode analysis
@@ -24,7 +26,7 @@ All MATLAB scripts are based on the COBRA Toolbox v.3.0 ([Heirendt *et al.*, 201
 | |- yield_MalSucr.m            # compare maximum nitrogenase activity for malate and sucrose
 | |- findMaxNit.m               # helper function for determining maximum nitrogenase activity
 | |- getMinO2.m                 # helper function for determining minimum oxygen demand
-| |- getMinO2_nitFixed.m        # helper function for determining minimum oxygen demand while achieving the same nitrogenase activity as the non-ammonia
-|                                 assimilating model 
+| |- getMinO2_nitFixed.m        # helper function for determining minimum oxygen demand while achieving the 
+|                                 same nitrogenase activity as the non-ammonia assimilating model 
 
 ```
