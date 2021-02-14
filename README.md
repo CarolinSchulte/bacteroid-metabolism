@@ -7,13 +7,13 @@ All MATLAB scripts are based on the COBRA Toolbox v.3.0 ([Heirendt *et al.*, 201
 ```
 |- README
 |
-|- iCS323.mat                   # MATLAB structure of the bacteroid model *i*CS323
+|- iCS323.mat                   # MATLAB structure of the bacteroid model iCS323
 |
 |- ecmtool/                     # forked from https://github.com/SystemsBioinformatics/ecmtool.git
 |
-| |- bacteroid_aminoacids.py    # extension of main.py to run conversion mode analysis on *i*CS323, 
+| |- bacteroid_aminoacids.py    # extension of main.py to run conversion mode analysis on iCS323, 
 |                                 using one amino acid at a time as an input
-| |- ECM_iCC541.m               # MATLAB script to modify *i*CC541 (Contador *et al.*, 2020, 
+| |- ECM_iCC541.m               # MATLAB script to modify iCC541 (Contador et al., 2020, 
 |                                 https://msystems.asm.org/content/5/1/e00516-19) for conversion mode analysis
 | |- ECMinputs/                 # Excel files specifying inputs and ouputs for conversion mode analysis
 | |- ECMresults/                # csv files with the conversion modes calculated for the different amino acid inputs
