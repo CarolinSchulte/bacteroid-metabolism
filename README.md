@@ -2,7 +2,7 @@
 Scripts to reproduce results for Carolin C. M. Schulte, Khushboo Borah, Rachel M. Wheatley, Jason J. Terpolilli, Gerhard Saalbach, Nick Crang, Daan H. de Groot, R. George Ratcliffe, Nicholas J. Kruger, Antonis Papachristodoulou, Philip S. Poole: "Metabolic constraints on nitrogen fixation by rhizobia in legume nodules" (*submitted*)  
 
 
-All MATLAB scripts are based on the COBRA Toolbox v.3.0 ([Heirendt *et al.*, 2019](https://www.nature.com/articles/s41596-018-0098-2))
+All MATLAB scripts were run with the COBRA Toolbox v.3.0 ([Heirendt *et al.*, 2019](https://www.nature.com/articles/s41596-018-0098-2)).
 
 ```
 |- README
