@@ -1,34 +1,30 @@
 # bacteroid-metabolism
-Scripts to reproduce results for Carolin C. M. Schulte, Khushboo Borah, Rachel M. Wheatley, Jason J. Terpolilli, Gerhard Saalbach, Nick Crang, Daan H. de Groot, R. George Ratcliffe, Nicholas J. Kruger, 
-Antonis Papachristodoulou, Philip S. Poole: "Legume control of nitrogen fixation by root nodule bacteria" (*submitted*)  
+Scripts to reproduce results for Carolin C. M. Schulte, Khushboo Borah, Rachel M. Wheatley, Jason J. Terpolilli, Gerhard Saalbach, Nick Crang, Daan H. de Groot, R. George Ratcliffe, Nicholas J. Kruger, Antonis Papachristodoulou, Philip S. Poole: "Metabolic constraints on nitrogen fixation by rhizobia in legume nodules" (*submitted*)  
 
-*eeFBA_O2Var.m*: script for ensemble-evolutionary flux balance analysis with varying oxygen uptake rates; functions are based on the scripts used in [Damiani *et al.*, *PLoS Comput Biol* 2017 Sep 28;13(9):e1005758](https://doi.org/10.1371/journal.pcbi.1005758)  
-*NH4assimilation_MalSucr.m*: script for calculating minimum oxygen uptake for bacteroids using malate or sucrose as a carbon source; testing the effect of ammonia assimilation via GS-GOGAT  
-*yield_MalSucr.m*: script for calculating maximum nitrogenase activity of bacteroids using malate or sucrose as a carbon source  
 
-## ecmtool
-Forked from
+All MATLAB scripts are based on the COBRA Toolbox v.3.0 ([Heirendt *et al.*, 2019](https://www.nature.com/articles/s41596-018-0098-2))
+
 ```
-https://github.com/SystemsBioinformatics/ecmtool.git
+|- README
+|
+|- iCS323.mat                   # MATLAB structure of the bacteroid model *i*CS323
+|
+|- ecmtool/                     # forked from https://github.com/SystemsBioinformatics/ecmtool.git
+|
+| |- bacteroid_aminoacids.py    # extension of main.py to run conversion mode analysis on *i*CS323, using one amino acid at a time as an input
+| |- ECM_iCC541.m               # MATLAB script to modify *i*CC541 ([Contador *et al.*, 2020](https://msystems.asm.org/content/5/1/e00516-19)) for conversion mode    |                                 analysis
+| |- ECMinputs/                 # Excel files specifying inputs and ouputs for conversion mode analysis
+| |- ECMresults/                # csv files with the conversion modes calculated for the different amino acid inputs
+| |- models_bacteroid/          # sbml files of the models used for conversion mode analysis
+|
+|- MATLABScripts/             
+|
+| |- bacteroid.m                # initialise bacteroid model by setting exchange fluxes
+| |- NH4assimiliation_MalSucr.m # compare minimum O2 demand for malate and sucrose with and without ammonia assimilation
+| |- yield_MalSucr.m            # compare maximum nitrogenase activity for malate and sucrose
+| |- findMaxNit.m               # helper function for determining maximum nitrogenase activity
+| |- getMinO2.m                 # helper function for determining minimum oxygen demand
+| |- getMinO2_nitFixed.m        # helper function for determining minimum oxygen demand while achieving the same nitrogenase activity as the non-ammonia
+|                                 assimilating model 
+
 ```
-
-**bacteroid_aminoacids.py**: extension of main.py to run conversion mode analysis on
-*i*CS323, using one amino acid at a time as an input
-
-**ECM_iCC541**: MATLAB script to modify *i*CC541 ([Contador *et al.*, 2020](https://msystems.asm.org/content/5/1/e00516-19)) for conversion mode analysis
-
-### ECMinputs
-Excel files specifying inputs and ouputs for conversion mode analysis
-
-### ECMresults
-csv files with the conversion modes calculated for the different amino acid inputs
-
-### models_bacteroid
-sbml files of the models used for conversion mode analysis
-
-## MatlabScripts
-### eeFBA
-functions to perform ensemble-evolutionary flux balance analysis; based on scripts developed in [Damiani *et al.* 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005758)
-
-### helper
-functions to perform flux balance analysis-based computations
