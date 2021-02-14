@@ -19,7 +19,7 @@ All MATLAB scripts were run with the COBRA Toolbox v.3.0 ([Heirendt *et al.*, 20
 | |- ECMresults/                # csv files with the conversion modes calculated for the different amino acid inputs
 | |- models_bacteroid/          # sbml files of the models used for conversion mode analysis
 |
-|- MATLABScripts/             
+|- MatlabScripts/             
 |
 | |- bacteroid.m                # initialise bacteroid model by setting exchange fluxes
 | |- NH4assimiliation_MalSucr.m # compare minimum O2 demand for malate and sucrose with and without ammonia assimilation
