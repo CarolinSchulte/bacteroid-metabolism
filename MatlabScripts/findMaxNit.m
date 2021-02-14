@@ -6,7 +6,7 @@ o2 = [];
 for i = carbonBounds
     try
         model = changeRxnBounds(model,carbonExc,i,'b');
-        FBA = optimizeCbModel(model,'max',0,0);
+        FBA = optimizeCbModel(model,'max','one');
         yield = FBA.f;
         o2_tmp = -FBA.x(findRxnIDs(model,'EX_cpd00007'));
         nit = [nit;yield];

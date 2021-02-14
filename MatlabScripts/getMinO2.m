@@ -7,7 +7,7 @@ function [carbon,minO2,nit] = getMinO2(model,carbonExc,carbonBounds,O2Bounds)
     model = changeRxnBounds(model,carbonExc,i,'b');
     for j = O2Bounds
         model = changeRxnBounds(model,'EX_cpd00007',j,'b');
-        FBA = optimizeCbModel(model,'max',0,0);
+        FBA = optimizeCbModel(model,'max','one');
         if FBA.f > 0
             o2 = j;
             break
@@ -22,4 +22,6 @@ function [carbon,minO2,nit] = getMinO2(model,carbonExc,carbonBounds,O2Bounds)
         carbon = [carbon;-i*4];
     elseif carbonExc =='EX_cpd00076'
         carbon = [carbon;-i*12];
+    end
+ end
  end
